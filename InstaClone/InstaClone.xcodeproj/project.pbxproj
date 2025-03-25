@@ -51,6 +51,7 @@
 		EB4B1A872D92D72100650324 /* InstaClone */ = {
 			isa = PBXGroup;
 			children = (
+				EB4B1A962D92D83100650324 /* Feed */,
 				EB4B1A882D92D72100650324 /* InstaCloneApp.swift */,
 				EB4B1A8A2D92D72100650324 /* ContentView.swift */,
 				EB4B1A8C2D92D72200650324 /* Assets.xcassets */,
@@ -65,6 +66,53 @@
 				EB4B1A8F2D92D72200650324 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EB4B1A962D92D83100650324 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				EB4B1A9B2D92D85700650324 /* View */,
+				EB4B1A9A2D92D85000650324 /* Interactor */,
+				EB4B1A992D92D84800650324 /* Presenter */,
+				EB4B1A982D92D84100650324 /* Entity */,
+				EB4B1A972D92D83800650324 /* Router */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		EB4B1A972D92D83800650324 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		EB4B1A982D92D84100650324 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		EB4B1A992D92D84800650324 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		EB4B1A9A2D92D85000650324 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		EB4B1A9B2D92D85700650324 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
