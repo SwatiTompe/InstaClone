@@ -1,19 +1,14 @@
-//
-//  FeedView.swift
-//  InstaClone
-//
-//  Created by Techizer Mac02 on 28/03/25.
-//
 
+//update the view
 import SwiftUI
 
-struct FeedView : View {
-    @ObservedObject var presenter : FeedPresenter
+struct FeedView: View {
+    @ObservedObject var presenter : Feedpresenter
     
     var body: some View {
         NavigationView {
             List(presenter.posts) { post in
-                VStack(alignment: .leading) {
+                VStack(alignment:.leading) {
                     AsyncImage(url: URL(string: post.url)) { image in
                         image
                             .resizable()
@@ -27,14 +22,14 @@ struct FeedView : View {
                     Text(post.title)
                         .font(.headline)
                         .padding(.top,5)
-
-                }
-                .padding()
+                }.padding()
             }
             .navigationTitle("Instaclone Feed")
             .onAppear {
-                presenter.
+                presenter.loadPosts()
             }
         }
     }
 }
+
+

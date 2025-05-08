@@ -1,27 +1,24 @@
-//
-//  FeedPresenter.swift
-//  InstaClone
-//
-//  Created by Techizer Mac02 on 28/03/25.
-//
+//update the presenter :>>>>>>>
 
 import Foundation
 
+//update the presenter to  fetch posts asynchronously
+
 protocol FeedPresenterProtocol : ObservableObject {
-    var posts : [Post] {get} //data for view
+    var posts : [Post] { get } //data for the view
     func loadPosts()
 }
 
-class FeedPresenter : FeedPresenterProtocol {
+class Feedpresenter : FeedPresenterProtocol {
     @Published var posts: [Post] = [] //observable by the view
     private let interactor : FeedInteractorProtocol
     
-    init(interactor:FeedInteractorProtocol) {
+    init(interactor: FeedInteractorProtocol) {
         self.interactor = interactor
     }
     
     func loadPosts() {
-        interactor.fetchPosts {[weak self] fetchedPosts in
+        interactor.fetchPosts { [weak self] fetchedPosts in
             DispatchQueue.main.async {
                 self?.posts = fetchedPosts
             }
