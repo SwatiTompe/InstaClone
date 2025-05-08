@@ -2,7 +2,7 @@ import Foundation
 
 struct Post: Codable,Identifiable {
     let id : Int
-    let title : String
-    let url : String
-    let thumbnailUrl : String
+    let userName : String
+    let imageURL : String
+    let caption : String
 }
