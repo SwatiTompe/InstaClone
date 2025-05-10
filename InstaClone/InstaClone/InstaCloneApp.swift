@@ -11,7 +11,9 @@ import SwiftUI
 struct InstaCloneApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let interactor = FeedInteractor()
+            let presenter = FeedPresenter(interactor: interactor)
+            FeedView(presenter: presenter)
         }
     }
 }

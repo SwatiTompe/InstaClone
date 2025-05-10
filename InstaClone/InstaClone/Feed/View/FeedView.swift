@@ -1,35 +1,43 @@
-
-//update the view
 import SwiftUI
 
 struct FeedView: View {
-    @ObservedObject var presenter : Feedpresenter
+    
+    @StateObject private var presenter : FeedPresenter
+    
+    init(presenter:FeedPresenter) {
+        _presenter = StateObject(wrappedValue: presenter)
+    }
     
     var body: some View {
         NavigationView {
             List(presenter.posts) { post in
-                VStack(alignment:.leading) {
-                    AsyncImage(url: URL(string: post.url)) { image in
-                        image
-                            .resizable()
-                            .scaledToFit()
-                    } placeholder: {
-                        ProgressView()
-                    }
-                    .frame(height: 200)
-                    .cornerRadius(10)
-                    
+                VStack(alignment: .leading) {
                     Text(post.title)
                         .font(.headline)
-                        .padding(.top,5)
-                }.padding()
+                    
+                    Text(post.url)
+                        .font(.subheadline)
+                        .foregroundColor(.blue)
+                        .lineLimit(1)
+                }
             }
             .navigationTitle("Instaclone Feed")
-            .onAppear {
+            .onAppear() {
                 presenter.loadPosts()
             }
         }
     }
 }
 
-
+/*
+ uses @MainActor to safely update the UI
+ uses @Published to reflect data in the view
+ uses async/await to simplify networking
+ fully swiftUi compatible
+ VIPER separation
+ 
+ 
+ 
+ 
+ 
+ */

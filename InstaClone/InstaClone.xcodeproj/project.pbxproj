@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB2B72CC2DCE06E900E75869 /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2B72CB2DCE06E900E75869 /* FeedRouter.swift */; };
+		EB3ECEF62DCCE20C006B4D5D /* FeedContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB3ECEF52DCCE20C006B4D5D /* FeedContracts.swift */; };
 		EB4253752D96694400501550 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4253742D96694400501550 /* Post.swift */; };
 		EB4253772D9669A900501550 /* FeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4253762D9669A900501550 /* FeedInteractor.swift */; };
 		EB4253792D966CF600501550 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4253782D966CF600501550 /* FeedPresenter.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB2B72CB2DCE06E900E75869 /* FeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
+		EB3ECEF52DCCE20C006B4D5D /* FeedContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedContracts.swift; sourceTree = "<group>"; };
 		EB4253742D96694400501550 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		EB4253762D9669A900501550 /* FeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractor.swift; sourceTree = "<group>"; };
 		EB4253782D966CF600501550 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
@@ -40,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB3ECEF42DCCE1F7006B4D5D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				EB3ECEF52DCCE20C006B4D5D /* FeedContracts.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		EB4B1A7C2D92D72100650324 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +91,7 @@
 		EB4B1A962D92D83100650324 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				EB3ECEF42DCCE1F7006B4D5D /* Protocols */,
 				EB4B1A9B2D92D85700650324 /* View */,
 				EB4B1A9A2D92D85000650324 /* Interactor */,
 				EB4B1A992D92D84800650324 /* Presenter */,
@@ -91,6 +104,7 @@
 		EB4B1A972D92D83800650324 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				EB2B72CB2DCE06E900E75869 /* FeedRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -197,6 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB2B72CC2DCE06E900E75869 /* FeedRouter.swift in Sources */,
+				EB3ECEF62DCCE20C006B4D5D /* FeedContracts.swift in Sources */,
 				EB4253792D966CF600501550 /* FeedPresenter.swift in Sources */,
 				EB4253752D96694400501550 /* Post.swift in Sources */,
 				EB4B1A8B2D92D72100650324 /* ContentView.swift in Sources */,
