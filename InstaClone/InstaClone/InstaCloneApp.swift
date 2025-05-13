@@ -17,3 +17,9 @@ struct InstaCloneApp: App {
         }
     }
 }
+
+/*
+ 
+ then we’ll move on to Presenter tests or UI Tests, whichever you prefer next.
+ 
+ */

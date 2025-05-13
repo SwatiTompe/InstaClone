@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 protocol FeedViewProtocol : AnyObject {
     func UpdatePosts()
@@ -21,6 +22,7 @@ protocol FeedInteractorProtocol {
     func fetchPosts() async -> [Post]
 }
 
+@MainActor
 protocol FeedRouterProtocol {
-    static func CreateModule() -> FeedView
+    static func CreateModule() -> AnyView
 }

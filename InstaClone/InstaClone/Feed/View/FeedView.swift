@@ -30,11 +30,8 @@ struct FeedView: View {
 }
 
 /*
- uses @MainActor to safely update the UI
- uses @Published to reflect data in the view
- uses async/await to simplify networking
- fully swiftUi compatible
- VIPER separation
+ lets continue by adding Unit and ui tests to your SwiftUI viper architecture
+ we will test if feedintercator correctly fetched posts from the api
  
  
  
