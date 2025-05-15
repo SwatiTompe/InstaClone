@@ -24,5 +24,5 @@ protocol FeedInteractorProtocol {
 
 @MainActor
 protocol FeedRouterProtocol {
-    static func CreateModule() -> AnyView
+    static func CreateModule() -> some View
 }

@@ -19,6 +19,7 @@
 		EB4B1A902D92D72200650324 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB4B1A8F2D92D72200650324 /* Preview Assets.xcassets */; };
 		EB9D47132DCF7E8A000578D3 /* InstaCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9D47122DCF7E8A000578D3 /* InstaCloneTests.swift */; };
 		EB9D471C2DCF879C000578D3 /* FeedInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9D471B2DCF879C000578D3 /* FeedInteractorTests.swift */; };
+		EBE810F82DD611E30058B4D5 /* FeedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE810F72DD611E30058B4D5 /* FeedPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		EB9D47102DCF7E8A000578D3 /* InstaCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9D47122DCF7E8A000578D3 /* InstaCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCloneTests.swift; sourceTree = "<group>"; };
 		EB9D471B2DCF879C000578D3 /* FeedInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractorTests.swift; sourceTree = "<group>"; };
+		EBE810F72DD611E30058B4D5 /* FeedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			children = (
 				EB9D47122DCF7E8A000578D3 /* InstaCloneTests.swift */,
 				EB9D471B2DCF879C000578D3 /* FeedInteractorTests.swift */,
+				EBE810F72DD611E30058B4D5 /* FeedPresenterTests.swift */,
 			);
 			path = InstaCloneTests;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB9D471C2DCF879C000578D3 /* FeedInteractorTests.swift in Sources */,
+				EBE810F82DD611E30058B4D5 /* FeedPresenterTests.swift in Sources */,
 				EB9D47132DCF7E8A000578D3 /* InstaCloneTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

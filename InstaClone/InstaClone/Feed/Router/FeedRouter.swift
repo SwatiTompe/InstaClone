@@ -10,7 +10,8 @@ import SwiftUI
 class FeedRouter : FeedRouterProtocol {
     
     @MainActor
-    static func CreateModule() -> AnyView {
+    static func CreateModule() -> some View
+    {
         let interactor = FeedInteractor()
         let presenter = FeedPresenter(interactor: interactor)
         let view = FeedView(presenter: presenter)
