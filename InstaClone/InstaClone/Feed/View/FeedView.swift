@@ -1,40 +1,28 @@
 import SwiftUI
 
 struct FeedView: View {
-    
-    @StateObject private var presenter : FeedPresenter
-    
-    init(presenter:FeedPresenter) {
-        _presenter = StateObject(wrappedValue: presenter)
-    }
+    @ObservedObject var presenter : FeedPresenter
     
     var body: some View {
-        NavigationView {
-            List(presenter.posts) { post in
-                VStack(alignment: .leading) {
-                    Text(post.title)
-                        .font(.headline)
-                    
-                    Text(post.url)
-                        .font(.subheadline)
-                        .foregroundColor(.blue)
-                        .lineLimit(1)
-                }
+        List(presenter.posts) { post in
+            Text(post.title)//PostTitle_1
+                .accessibilityIdentifier("PostTitle_\(post.id)")
+        }
+        .onAppear {
+            Task {
+                
+                await presenter.loadPosts()
             }
-            .navigationTitle("Instaclone Feed")
-            .onAppear() {
-                presenter.loadPosts()
-            }
+        }
+        .alert(isPresented: .constant(presenter.errorMessage != nil)) {
+            Alert(title: Text("Error"),
+                  message: Text(presenter.errorMessage ?? "Unknown error"),
+                  dismissButton: .default(Text("OK"), action: {
+                presenter.errorMessage = nil
+            }))
         }
     }
 }
 
-/*
- lets continue by adding Unit and ui tests to your SwiftUI viper architecture
- we will test if feedintercator correctly fetched posts from the api
- 
- 
- 
- 
- 
- */
+
+

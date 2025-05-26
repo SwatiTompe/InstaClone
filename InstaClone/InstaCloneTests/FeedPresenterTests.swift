@@ -8,22 +8,29 @@
 import XCTest
 @testable import InstaClone
 import Combine
+import SwiftUI
 
+enum MockError : Error {
+    case networkFailure
+}
+
+class MockFailingInteractor : FeedInteractorProtocol {
+    func fetchPosts() async -> [Post] {
+        return [] //simulate empty or failed fetch
+    }
+}
+
+
+@MainActor
 class FeedPresenterTests: XCTestCase {
     
-    //Mock Interactor
-    class MockFeedInteractor : FeedInteractorProtocol {
-        
-        let samplePosts = [
-            Post(id: 1, title: "Sample 1", url: "", thumbnailUrl: ""),
-            Post(id: 2, title: "Sample 2", url: "", thumbnailUrl: "")
-        ]
-        
-        func fetchPosts() async -> [Post] {
-            return samplePosts
-        }
-        
+    @MainActor
+    func testPostsInitiallyEmpty() {
+        let mockInteractor = MockFeedInteractor()
+        let presenter = FeedPresenter(interactor: mockInteractor)
+        XCTAssertTrue(presenter.posts.isEmpty,"Posts should be empty on init")
     }
+    
     
     @MainActor
     func testLoadPostsPublishesPost() async {
@@ -39,6 +46,7 @@ class FeedPresenterTests: XCTestCase {
         cancellable = await presenter.$posts
             .dropFirst()
             .sink { posts in
+                print("Posts received: \(posts.count)")
                 if posts.count == 2 {
                     expectation.fulfill()
                 }
@@ -47,7 +55,6 @@ class FeedPresenterTests: XCTestCase {
         
         //Act
         await presenter.loadPosts()
-        
         
         
         //Assert
@@ -60,15 +67,38 @@ class FeedPresenterTests: XCTestCase {
             cancellable.cancel()
         }
     }
+    
+    @MainActor
+    func testLoadPostsWithEmptyResult() async {
+       
+        //Arrange
+        let mockInteractor = MockFailingInteractor()
+        let presenter = await FeedPresenter(interactor: mockInteractor)
+        
+        let expectation = XCTestExpectation(description: "Posts should be empty")
+            
+        var cancellable : Any?
+        cancellable = await presenter.$posts
+            .dropFirst()
+            .sink { posts in
+                if posts.isEmpty {
+                    expectation.fulfill()
+                }
+                
+            }
+        
+        //Act
+        await presenter.loadPosts()
+        
+        //Assert
+        wait(for: [expectation], timeout: 2.0)
+        XCTAssertEqual(presenter.posts.count, 0)
+        
+        if let cancellable = cancellable as? AnyCancellable {
+            cancellable.cancel()
+        }
+    }
+    
 }
 
-/*
- we are using combines .sink to observe @Published changes
- .dropFirst() skips the initial empty array
- we  call await presenter.loadPosts() to trigger the update
- we check that posts.count == 2 and fulfill the expectation
- then we assert the presenter state with XCTassertEqual.
- 
- 
- */
 

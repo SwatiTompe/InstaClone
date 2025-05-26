@@ -15,7 +15,7 @@ protocol FeedViewProtocol : AnyObject {
 @MainActor
 protocol FeedPresenterProtocol : ObservableObject {
     var posts : [Post] { get }
-    func loadPosts()
+    func loadPosts() async
 }
 
 protocol FeedInteractorProtocol {
@@ -24,5 +24,7 @@ protocol FeedInteractorProtocol {
 
 @MainActor
 protocol FeedRouterProtocol {
-    static func CreateModule() -> some View
+    static func CreateModule() -> AnyView
 }
+
+

@@ -10,22 +10,39 @@ import XCTest
 
 final class FeedInteractorTests: XCTestCase {
     
-    var interactor : FeedInteractor!
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        interactor = FeedInteractor()
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        interactor = nil
-    }
-
-    func testFetchPostsReturnsData() async throws {
-        let posts = await interactor.fetchPosts()
-        XCTAssertFalse(posts.isEmpty, "Expected non-empty posts array")
+    func testFetchPOstsReturnPOsts() async {
+        //Arrange
+        let mockService = MockNetworkService()
+        mockService.mockPOsts = [
+            Post(id: 1, title: "test 1", url: "", thumbnailUrl: ""),
+            Post(id: 2, title: "test 2", url: "", thumbnailUrl: "")
+        ]
+        
+        let interactor = FeedInteractor(networkService: mockService)
+        
+        //Act
+        let result = await interactor.fetchPosts()
+        
+        //Assert
+        XCTAssertEqual(result.count, 2)
+        XCTAssertEqual(result.first?.title, "test 1")
+        
     }
     
-
+    func testFetchPOstsWithErrorReturnsEmptyArray() async {
+        
+        //Arrange
+        let mockService = MockNetworkService()
+        mockService.shouldREturnError = true
+        
+        let interactor = FeedInteractor(networkService: mockService)
+        
+        //Act
+        let result = await interactor.fetchPosts()
+        
+        //Assert
+        XCTAssertTrue(result.isEmpty)
+    }
 }
+
+

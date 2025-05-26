@@ -17,12 +17,26 @@
 		EB4B1A8B2D92D72100650324 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4B1A8A2D92D72100650324 /* ContentView.swift */; };
 		EB4B1A8D2D92D72200650324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB4B1A8C2D92D72200650324 /* Assets.xcassets */; };
 		EB4B1A902D92D72200650324 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB4B1A8F2D92D72200650324 /* Preview Assets.xcassets */; };
+		EB774D2A2DD83A51001BF7E2 /* InstaCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB774D292DD83A51001BF7E2 /* InstaCloneUITests.swift */; };
+		EB774D2C2DD83A51001BF7E2 /* InstaCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB774D2B2DD83A51001BF7E2 /* InstaCloneUITestsLaunchTests.swift */; };
+		EB774D322DD83C0B001BF7E2 /* FeedViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB774D212DD825D5001BF7E2 /* FeedViewUITests.swift */; };
+		EB774D342DD89D4A001BF7E2 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB774D332DD89D4A001BF7E2 /* DIContainer.swift */; };
 		EB9D47132DCF7E8A000578D3 /* InstaCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9D47122DCF7E8A000578D3 /* InstaCloneTests.swift */; };
 		EB9D471C2DCF879C000578D3 /* FeedInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9D471B2DCF879C000578D3 /* FeedInteractorTests.swift */; };
+		EBAFDFC12DD9CB5A00435213 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFDFC02DD9CB5A00435213 /* NetworkManager.swift */; };
+		EBC67FEF2DDCC6900024E989 /* PostCacheActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC67FEE2DDCC6900024E989 /* PostCacheActor.swift */; };
+		EBCF06CF2DE48835005E1F47 /* MockFeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF06CE2DE48835005E1F47 /* MockFeedInteractor.swift */; };
 		EBE810F82DD611E30058B4D5 /* FeedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE810F72DD611E30058B4D5 /* FeedPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EB774D2D2DD83A51001BF7E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB4B1A7D2D92D72100650324 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB4B1A842D92D72100650324;
+			remoteInfo = InstaClone;
+		};
 		EB9D47142DCF7E8A000578D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EB4B1A7D2D92D72100650324 /* Project object */;
@@ -44,14 +58,29 @@
 		EB4B1A8A2D92D72100650324 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EB4B1A8C2D92D72200650324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB4B1A8F2D92D72200650324 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EB774D212DD825D5001BF7E2 /* FeedViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewUITests.swift; sourceTree = "<group>"; };
+		EB774D272DD83A51001BF7E2 /* InstaCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB774D292DD83A51001BF7E2 /* InstaCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCloneUITests.swift; sourceTree = "<group>"; };
+		EB774D2B2DD83A51001BF7E2 /* InstaCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EB774D332DD89D4A001BF7E2 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		EB9D47102DCF7E8A000578D3 /* InstaCloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaCloneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB9D47122DCF7E8A000578D3 /* InstaCloneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaCloneTests.swift; sourceTree = "<group>"; };
 		EB9D471B2DCF879C000578D3 /* FeedInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractorTests.swift; sourceTree = "<group>"; };
+		EBAFDFC02DD9CB5A00435213 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		EBC67FEE2DDCC6900024E989 /* PostCacheActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCacheActor.swift; sourceTree = "<group>"; };
+		EBCF06CE2DE48835005E1F47 /* MockFeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFeedInteractor.swift; sourceTree = "<group>"; };
 		EBE810F72DD611E30058B4D5 /* FeedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EB4B1A822D92D72100650324 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB774D242DD83A51001BF7E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,6 +110,7 @@
 			children = (
 				EB4B1A872D92D72100650324 /* InstaClone */,
 				EB9D47112DCF7E8A000578D3 /* InstaCloneTests */,
+				EB774D282DD83A51001BF7E2 /* InstaCloneUITests */,
 				EB4B1A862D92D72100650324 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +120,7 @@
 			children = (
 				EB4B1A852D92D72100650324 /* InstaClone.app */,
 				EB9D47102DCF7E8A000578D3 /* InstaCloneTests.xctest */,
+				EB774D272DD83A51001BF7E2 /* InstaCloneUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +148,10 @@
 		EB4B1A962D92D83100650324 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				EBAFDFC02DD9CB5A00435213 /* NetworkManager.swift */,
+				EBC67FEE2DDCC6900024E989 /* PostCacheActor.swift */,
+				EBCF06CE2DE48835005E1F47 /* MockFeedInteractor.swift */,
+				EB774D332DD89D4A001BF7E2 /* DIContainer.swift */,
 				EB3ECEF42DCCE1F7006B4D5D /* Protocols */,
 				EB4B1A9B2D92D85700650324 /* View */,
 				EB4B1A9A2D92D85000650324 /* Interactor */,
@@ -167,6 +202,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		EB774D282DD83A51001BF7E2 /* InstaCloneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EB774D212DD825D5001BF7E2 /* FeedViewUITests.swift */,
+				EB774D292DD83A51001BF7E2 /* InstaCloneUITests.swift */,
+				EB774D2B2DD83A51001BF7E2 /* InstaCloneUITestsLaunchTests.swift */,
+			);
+			path = InstaCloneUITests;
+			sourceTree = "<group>";
+		};
 		EB9D47112DCF7E8A000578D3 /* InstaCloneTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +241,24 @@
 			productName = InstaClone;
 			productReference = EB4B1A852D92D72100650324 /* InstaClone.app */;
 			productType = "com.apple.product-type.application";
+		};
+		EB774D262DD83A51001BF7E2 /* InstaCloneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB774D2F2DD83A51001BF7E2 /* Build configuration list for PBXNativeTarget "InstaCloneUITests" */;
+			buildPhases = (
+				EB774D232DD83A51001BF7E2 /* Sources */,
+				EB774D242DD83A51001BF7E2 /* Frameworks */,
+				EB774D252DD83A51001BF7E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB774D2E2DD83A51001BF7E2 /* PBXTargetDependency */,
+			);
+			name = InstaCloneUITests;
+			productName = InstaCloneUITests;
+			productReference = EB774D272DD83A51001BF7E2 /* InstaCloneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		EB9D470F2DCF7E8A000578D3 /* InstaCloneTests */ = {
 			isa = PBXNativeTarget;
@@ -228,6 +291,10 @@
 					EB4B1A842D92D72100650324 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
+					EB774D262DD83A51001BF7E2 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = EB4B1A842D92D72100650324;
+					};
 					EB9D470F2DCF7E8A000578D3 = {
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = EB4B1A842D92D72100650324;
@@ -249,6 +316,7 @@
 			targets = (
 				EB4B1A842D92D72100650324 /* InstaClone */,
 				EB9D470F2DCF7E8A000578D3 /* InstaCloneTests */,
+				EB774D262DD83A51001BF7E2 /* InstaCloneUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,6 +328,13 @@
 			files = (
 				EB4B1A902D92D72200650324 /* Preview Assets.xcassets in Resources */,
 				EB4B1A8D2D92D72200650324 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB774D252DD83A51001BF7E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,12 +354,26 @@
 			files = (
 				EB2B72CC2DCE06E900E75869 /* FeedRouter.swift in Sources */,
 				EB3ECEF62DCCE20C006B4D5D /* FeedContracts.swift in Sources */,
+				EBAFDFC12DD9CB5A00435213 /* NetworkManager.swift in Sources */,
 				EB4253792D966CF600501550 /* FeedPresenter.swift in Sources */,
+				EBCF06CF2DE48835005E1F47 /* MockFeedInteractor.swift in Sources */,
+				EBC67FEF2DDCC6900024E989 /* PostCacheActor.swift in Sources */,
 				EB4253752D96694400501550 /* Post.swift in Sources */,
 				EB4B1A8B2D92D72100650324 /* ContentView.swift in Sources */,
 				EB4253772D9669A900501550 /* FeedInteractor.swift in Sources */,
 				EB42537B2D9672BA00501550 /* FeedView.swift in Sources */,
+				EB774D342DD89D4A001BF7E2 /* DIContainer.swift in Sources */,
 				EB4B1A892D92D72100650324 /* InstaCloneApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB774D232DD83A51001BF7E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB774D2C2DD83A51001BF7E2 /* InstaCloneUITestsLaunchTests.swift in Sources */,
+				EB774D322DD83C0B001BF7E2 /* FeedViewUITests.swift in Sources */,
+				EB774D2A2DD83A51001BF7E2 /* InstaCloneUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +390,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EB774D2E2DD83A51001BF7E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB4B1A842D92D72100650324 /* InstaClone */;
+			targetProxy = EB774D2D2DD83A51001BF7E2 /* PBXContainerItemProxy */;
+		};
 		EB9D47152DCF7E8A000578D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EB4B1A842D92D72100650324 /* InstaClone */;
@@ -483,6 +577,40 @@
 			};
 			name = Release;
 		};
+		EB774D302DD83A51001BF7E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FWL2P7K5F8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swati.InstaCloneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = InstaClone;
+			};
+			name = Debug;
+		};
+		EB774D312DD83A51001BF7E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FWL2P7K5F8;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swati.InstaCloneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = InstaClone;
+			};
+			name = Release;
+		};
 		EB9D47162DCF7E8A000578D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -536,6 +664,15 @@
 			buildConfigurations = (
 				EB4B1A942D92D72200650324 /* Debug */,
 				EB4B1A952D92D72200650324 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB774D2F2DD83A51001BF7E2 /* Build configuration list for PBXNativeTarget "InstaCloneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB774D302DD83A51001BF7E2 /* Debug */,
+				EB774D312DD83A51001BF7E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
